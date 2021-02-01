@@ -35,7 +35,7 @@ public class LoginController extends HttpServlet {
         if(loginDAO.validate(username,password)){
             RequestDispatcher dispatcher=request.getRequestDispatcher("finished");
         }else {
-            throw new Exception("Login not successful");
+            throw new Exception("Invalid username or password");
         }
     }
 }
